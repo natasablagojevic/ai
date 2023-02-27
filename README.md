@@ -1,1 +1,1 @@
-# ai
+# ai - Vestacka inteligencija MATF
