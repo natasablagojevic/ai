@@ -1,0 +1,76 @@
+prvo najbolji = bira prvi prema funkciji evaluacije
+potpunost - cuvanje mogucih alternativa, ali moze da dovede do vrtenja u krug
+
+* otvorena lista - lista cvorova za koji mozda nisu poseceni svi njegovi susedi; uloga: da cuva alternative, da ih ne izgubimo
+
+* zatvorena lista - cuva posecene cvorove za koji su vec poseceni svi njegovi susedi (od njega smo videli sve sta moze da ponudi)
+
+* algoritam se zaustavlja zato sto je broj cvorova u grafu konacan;
+* u otvorenoj listi ne moze da bude vise cvorova nego sto ih je u grafu, i bice smesteni u zatovrenu
+
+* pohlepan pristup se realizuje preko otvorene i zatvorene liste i time nikada ne dolazi do ciklusa
+
+* ne daje nikakve garancije na optimalnost, ne znaci da ce da nadje najbolji put i da ce ga naci efikasno
+
+* kad god konstatujemo da je neki cvor u otvorenoj ili zatvorenoj listi proverimo da li je trenutni put kraci ili duzi u odnosu preko drugog
+
+************************************************************
+
+** A*
+
+* da odsecanja vrsimo koliko toliko
+* smatra se algoritmom vestacke inteligencije
+* varijanta prvo najbolji, mozemo da ga gledamo kao istancu
+
+* f-ja evaluacije:
+	f(n) = g(n) + h(n) 
+	
+	g(n) - stvarna duzina puta do cvora n
+		+ uvek koristimo do sada nadjeno rastojanje od polaznog do cvora n
+		
+	h(n) - heuristicka procena do ciljnog cvora od trenutnog cvora
+		+ fiksirana je
+		+ vazdusno rastojanje
+		+ krije se sva pamet algoritma A*
+		+ kako da dizajniram da dobijem sve najkrace puteve?
+		
+* algoritam:
+	- ako m jeste u otvorenoj ili zatvorenoj listi, to znaci da je ono vec vidjeno, postoji neki 
+	  put do ciljnog cvora preko m, a sad smo ga videli preko nekog drugog puta, ako smo nasli put nize cene
+	  azriramo vrednosti roditelja i g(m) i f(m). 
+	  cvor m iz zatvorene liste smestamo u otvorenu listu
+	
+	- kada smo zavrsili sa svim susedima izbacujemo ga iz otvorene i smestamo u zatvorenu listu
+	
+* svojstva:
+	1.  potpunost : ako postoji put A* ce ga naci
+	2.  optimalnost : u opstem slucaju A* nema svojstvo optimalnosti; ako
+		nasa heuristika zadovoljava neka svojstva onda je nas put optimalan
+		
+		*Heuristika h je dopustiva ako nikada ne precenjuje stvarno 
+		(najkraceg) rastojanje izmedju tekuceg cvora i ciljnog cvora
+		h = 0 => Dajkstrin algoritam (neinformisano)
+		
+* dizajniranje heuristicke funkcje
+
+* specijalni sucajevi primene:
+	1. h = 0 -> dajkstra 
+	2. pronalazenje puta na uniformnoj kvadratnoj mrezi
+		- menhetn rastojanja
+		- euklidska rastojanja
+		- cebisovljevo rastojanje
+		
+* 	implementaciona pitanja:
+
+	- u vreme kada name je potrebno tada mora da radi dovoljo brzo
+	- mini-hip = otvorena lista O(logn)
+	- hes = zatvorena lista O(1)
+	
+	- dosta alokacija i dealokacija mogu da dovedu do fragmentacije
+	- najgori slucaj?	Ako ne postoji put od pocetnog do ciljanog cvora
+	
+	- A* se trudi da trazi optimalne puteve
+		ako se pocetni cvor nalazi u jednoj komponenti, a ciljani cvor u drugoj komponenti
+		tada treba da ispitamo sve cvorove te komponente
+		
+	
