@@ -1,5 +1,7 @@
 import os
-from iertools import product
+import sys
+from itertools import product
+
 
 class KNF:
     def __init__(self):
