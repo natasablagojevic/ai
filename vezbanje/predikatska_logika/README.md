@@ -1,9 +1,8 @@
 ∀ ∃
 
-1.  Zadatak
+1.  Zadatak:
             Svako zadovoljstvo se placa.
-
-            zadovoljstvo se placa.
+            Zadovoljstvo se placa.
 
             z(x) - x je zaovoljstvo
             p(x) - x se placa
@@ -15,7 +14,7 @@
             Greska:
             (∀x)(z(x) & p(x))
 
-2.  Zadatak
+2.  Zadatak:
             Postoji zadovoljstvo koje se placa.
 
             z(x) - x je zadovoljstvo
@@ -28,7 +27,7 @@
             Sve je zadovoljstvo i sve se placa
             (∀x) (z(x) => p(x))
 
-3.  Zadatak
+3.  Zadatak:
             Ni jedno zadovoljstvo nije posao.
 
             (∀x) (z(x) => ~p(x))
@@ -40,7 +39,7 @@
             (∀x) (z(x) & ~p(x)) # sve je zadovoljstvo i nista nije posao
             (∀x) (z(x) <=> ~p(x))
 
-4.  Zadatak
+4.  Zadatak:
             Sve sto lejti to ima krila i lagano je.
             Sve sto pliva to nema krila.
             Sve sto pliva to ne leti.
@@ -54,7 +53,7 @@
             (∀x) (p(x) => ~k(x))
             (∀x) (p(x) => ~l(x))
 
-5.  Zadatak
+5.  Zadatak:
             Dve nemimoilazne prave se seku ili su paralelne.
             Prave koje se seku leze u istoj ravni.
             Prave koje su paralelne leze u istoj ravni.
@@ -70,7 +69,7 @@
             (∀x)(∀y) (p(x, y) => r(x, y))
             (∀x)(∀y) (m(x, y) => r(x, y))
 
-6.  Zadatak
+6.  Zadatak:
             Svaka dva brata imaju zajednickog roditelja.
             Roditelj je stariji od deteta.
             Postoje braca.
@@ -85,7 +84,7 @@
             (∃x)(∃y) b(x, y)
             (∀x)(∀y) ~s(x, y)
 
-7.  Zadatak
+7.  Zadatak:
             Svako ima rodjaka na moru ili planini.
             Ko ima rodjaka na moru, bio je na moru.
             Ko ima rodjaka na planini, bio je na planini.
@@ -101,7 +100,7 @@
             (∀x) (rp(x) => p(x))
             (∃x) (~p(x) and ~m(x))
 
-8.  Zadatak
+8.  Zadatak:
             Svako ruca kod kuce ili u restoranu.
             Ko ruca u restoranu i nema novca, taj pere sudove u restoranu.
             Janko nema novca.
@@ -122,7 +121,7 @@
             nn(j)
             rk(j) | ps(j)
 
-9.  Zadatak
+9.  Zadatak:
             Ko rano rani, ceo dan je pospan.
             Ko rano rani, ceo da je pospan ili dve srece grabi.
             Ko dve srece grabi, ceo dan je pospan.
@@ -135,7 +134,7 @@
             (∀x) (rr(x) => (p(x) or ds(x)))
             (∀x) (ds(s) => p(x))
 
-10. Zadatak
+10. Zadatak:
             Ko se vozi avionom dosta zaradjuje.
             Ko dosta zaradjuje puno radi.
             Janko se vozi avionom.
@@ -151,7 +150,7 @@
             ~va(j)
             ~pr(j)
 
-11. Zadatak
+11. Zadatak:
             Ako postoji cipela koja u svakom trenutku odgovara svakoj nozi,
                 onda za svaku nogu postoji cipela koja joj u nekom trenutku odgovara
                 i za svaku nogu postoji trenutak takav da postoji cipela
@@ -168,7 +167,7 @@
 
             (∃y)(∀z)(∀x)p(x, y, z) => ((∀x)(∃y)(∃z)p(x, y, z) and (∀x)(∃z)(∃y)p(x, y, z))
 
-12. Zadatak
+12. Zadatak:
             Ko laze taj krade.
             Ko krade i uhvacen je u kradji, taj ide u zatvor.
             Al Kapone laze.
@@ -191,7 +190,7 @@
             u(ak)
             l(ll)
 
-13. Zadatak
+13. Zadatak:
             Ako onaj ko laze taj i krade i ako bar neko laze, onda neko i krade.
 
             l(x) - x laze
@@ -199,7 +198,7 @@
 
             ((∀x)l(x) => k(x) and ((∃x)l(x) =>(∃x)k(x)))
 
-14. Zadatak
+14. Zadatak:
             Ako je X prijatelj osobe Y, onda je Y prijatelj osobe X.
             Ako je X prijatelj osobe Y, onda X voli Y.
             Ne postoji neko ko je povredio osobu koju voli.
