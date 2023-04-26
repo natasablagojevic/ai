@@ -5,6 +5,7 @@
 - Razlikujemo:
     1. Onsnovna - propagacija unapred, unazad
     2. Rekurzivne
+    3. Konvulotivne
     
 - Prepoznavanje lica, otisak prsta = neuronske mreze koje vrse prepoznavanje
 
