@@ -1,0 +1,10 @@
+problem -> CNF -> dimacs -> minisat -> result -> display result
+
+     prom  kaluzule
+p cnf 3    2
+2 -3 0
+-1 2 -3 0
+
+KNF - konjuktivna normalna forma
+(p2 | ~p3) & (~p1 | p2 | ~p3)
+
