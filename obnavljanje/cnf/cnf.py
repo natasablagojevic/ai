@@ -49,7 +49,7 @@ class CNF:
                     var_name = number_to_var_name[var_number]
                     var_values[var_name] = 0 if var.startswith('-') else 1
                 
-                true_vars - list(filter(lambda v: v[1, var_values.items()]))
+                true_vars - list(filter(lambda v: v[1]==1, var_values.items()))
                 true_vars.sort() 
                 
                 for var in true_vars:
